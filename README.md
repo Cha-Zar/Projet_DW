@@ -1,4 +1,4 @@
-# Projet Data Warehouse F1 — DW_F1
+# Projet Data Warehouse F1 DW_F1
 
 ## Vue d'ensemble
 
@@ -44,7 +44,7 @@ DW/
 
 ---
 
-## Architecture — Data Warehouse DW_F1
+## Architecture Data Warehouse DW_F1
 
 ### Schéma en étoile
 
@@ -62,18 +62,18 @@ DIM_Season_Standings (optionnel, relation manuelle sur year)
 ### Tables
 
 **Dimensions (descriptives) :**
-- `DIM_Circuits` (77) — circuits, localisation GPS, altitudes
-- `DIM_Drivers` (861) — pilotes, dates de naissance, nationalités
-- `DIM_Constructors` (212) — écuries, nationalités
-- `DIM_Races` (1 125) — courses, sessions (FP1, FP2, FP3, quali, sprint)
-- `DIM_Season_Standings` (16) — champions par saison 2009-2024
+- `DIM_Circuits` (77)  circuits, localisation GPS, altitudes
+- `DIM_Drivers` (861)  pilotes, dates de naissance, nationalités
+- `DIM_Constructors` (212)  écuries, nationalités
+- `DIM_Races` (1 125)  courses, sessions (FP1, FP2, FP3, quali, sprint)
+- `DIM_Season_Standings` (16)  champions par saison 2009-2024
 
 **Faits (mesures) :**
-- `FACT_Results` (26 759) — résultats courses (points, positions, temps, laps)
+- `FACT_Results` (26 759)  résultats courses (points, positions, temps, laps)
 
 **Staging (zones tampons) :**
-- `STG_Drivers`, `STG_Races`, `STG_Results` — intermédiaires CSV
-- `STG_API_Standings` — classements API Jolpica
+- `STG_Drivers`, `STG_Races`, `STG_Results`  intermédiaires CSV
+- `STG_API_Standings`  classements API Jolpica
 
 ---
 
@@ -218,12 +218,12 @@ AvgPointsPerRace  = DIVIDE([TotalPoints], COUNTROWS(FACT_Results), 0)
 
 ## Fichiers importants
 
-- **`F1_Dashboard.pbix`** — Dashboard Power BI complet (4 pages : Driver Performance, Constructor Battle, Circuit Analysis, Season Overview)
-- **`ApiStandingsScript.cs`** — Script C# SSIS (à intégrer dans Script Task du package `Load_API_Jolpica.dtsx`)
-- **`csv files/`** — 5 fichiers CSV sources depuis Kaggle Ergast (circuits, constructors, drivers, races, results)
-- **`excel/F1_Season_Standings.xlsx`** — Données de championnat 2009-2024
-- **`sql/01_create_database_and_tables.sql`** — Point de départ (lancer en premier)
-- **`sql/05_validation_queries.sql`** — Vérification après chargement
+- **`F1_Dashboard.pbix`** Dashboard Power BI complet (4 pages : Driver Performance, Constructor Battle, Circuit Analysis, Season Overview)
+- **`ApiStandingsScript.cs`** Script C# SSIS (à intégrer dans Script Task du package `Load_API_Jolpica.dtsx`)
+- **`csv files/`** 5 fichiers CSV sources depuis Kaggle Ergast (circuits, constructors, drivers, races, results)
+- **`excel/F1_Season_Standings.xlsx`**  Données de championnat 2009-2024
+- **`sql/01_create_database_and_tables.sql`**  Point de départ (lancer en premier)
+- **`sql/05_validation_queries.sql`**  Vérification après chargement
 
 ---
 
