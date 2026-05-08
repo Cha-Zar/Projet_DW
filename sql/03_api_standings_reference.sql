@@ -1,0 +1,35 @@
+-- 03: Reference du fichier CSV provenant de l'API Jolpica.
+-- Ce fichier est informatif (pas de commandes SQL a executer).
+
+-- Source API:
+-- GET https://api.jolpi.ca/ergast/f1/2023/driverStandings.json
+
+-- Chemin cible du CSV:
+-- C:\Users\user\Desktop\Projet_DW_F1\api_standings.csv
+
+-- Entete:
+-- season,round,driverCode,driverId,points,wins,position
+
+-- Exemple de contenu:
+-- 2023,22,VER,max_verstappen,575,19,1
+-- 2023,22,PER,perez,285,2,2
+-- 2023,22,HAM,hamilton,234,0,3
+-- 2023,22,ALO,alonso,206,0,4
+-- 2023,22,LEC,leclerc,206,0,5
+-- 2023,22,NOR,norris,205,0,6
+-- 2023,22,SAI,sainz,200,1,7
+-- 2023,22,RUS,russell,175,0,8
+-- 2023,22,PIA,piastri,97,0,9
+-- 2023,22,STR,stroll,74,0,10
+-- 2023,22,GAS,gasly,62,0,11
+-- 2023,22,OCO,ocon,58,0,12
+-- 2023,22,ALB,albon,27,0,13
+-- 2023,22,TSU,tsunoda,17,0,14
+-- 2023,22,BOT,bottas,10,0,15
+-- 2023,22,HUL,hulkenberg,9,0,16
+-- 2023,22,RIC,ricciardo,6,0,17
+-- 2023,22,ZHO,zhou,6,0,18
+-- 2023,22,MAG,kevin_magnussen,3,0,19
+-- 2023,22,LAW,lawson,2,0,20
+-- 2023,22,SAR,sargeant,1,0,21
+-- 2023,22,DEV,de_vries,0,0,22
